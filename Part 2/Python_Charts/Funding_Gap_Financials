@@ -1,0 +1,177 @@
+"""
+Visual 1: Funding-Gap Composition, 2018–2025
+Prysmian Group Dissertation — Working Capital Analysis
+ 
+FONT SETUP (local use):
+    Install Outfit from https://fonts.google.com/specimen/Outfit
+    Then set: FONT = "Outfit" at the top of this file.
+    All charts share the same FONT, COLORS, and STYLE_PARAMS constants.
+"""
+ 
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+import matplotlib.ticker as mticker
+import numpy as np
+ 
+# ── Shared style constants (reuse across all visuals) ────────────────────────
+FONT        = "Times New Roman"
+TITLE_SIZE  = 14.5
+LABEL_SIZE  = 11.5
+TICK_SIZE   = 10
+NOTE_SIZE   = 8.5
+DPI         = 300
+FIG_W, FIG_H = 11, 7.5
+
+MARGINS = dict(left=0.08, right=0.97, top=0.90, bottom=0.22)
+ 
+COLORS = {
+    "trade_rec"    : "#185FA5",
+    "contract_ast" : "#5A9ED6",
+    "inventories"  : "#A8CCEE",
+    "trade_pay"    : "#8B1A1A",
+    "contract_lib" : "#D98070",
+    "net_gap"      : "#1D9E75",
+    "grid"         : "#E8E8E8",
+    "zero_line"    : "#AAAAAA",
+    "axis_text"    : "#666666",
+    "note_text"    : "#999999",
+}
+# ─────────────────────────────────────────────────────────────────────────────
+ 
+# ── Data (€m, Prysmian Annual Reports 2018–2025) ─────────────────────────────
+# Contract assets: mapped from construction-contract notes (2018–24),
+# IFRS 15 disclosure (2025). Trade payables shown as positive absolutes.
+# 2024 figures are restated comparatives per FY25 release (PPA finalisation).
+ 
+years           = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+trade_rec       = [1635, 1475, 1374, 1622, 1942, 1987, 2433, 2428]
+contract_assets = [ 362,  450,  162,  247,  503,  485,  554,  567]
+inventories     = [1515, 1523, 1531, 2054, 2241, 2264, 2858, 3066]
+trade_pay       = [2132, 2062, 1958, 2592, 2718, 2199, 2462, 2798]  # abs values
+contract_lib    = [ 223,  298,  368,  454,  825, 1627, 2074, 2325]  # abs values
+ 
+net_gap = [
+    tr + ca + inv - tp - cl
+    for tr, ca, inv, tp, cl
+    in zip(trade_rec, contract_assets, inventories, trade_pay, contract_lib)
+]
+# 2018→1157, 2019→1088, 2020→741, 2021→877, 2022→1143, 2023→910, 2024→1309, 2025→938
+# ─────────────────────────────────────────────────────────────────────────────
+ 
+plt.rcParams.update({
+    "font.family"       : FONT,
+    "axes.spines.top"   : False,
+    "axes.spines.right" : False,
+    "axes.spines.left"  : False,
+    "axes.spines.bottom": False,
+    "xtick.bottom"      : False,
+    "ytick.left"        : False,
+})
+ 
+fig, ax = plt.subplots(figsize=(FIG_W, FIG_H))
+fig.subplots_adjust(**MARGINS)
+ 
+x     = np.arange(len(years))
+width = 0.52
+ 
+# ── Positive stack (gross tie-up) ────────────────────────────────────────────
+bot1 = np.zeros(len(years))
+bot2 = np.array(trade_rec, dtype=float)
+bot3 = bot2 + np.array(contract_assets, dtype=float)
+ 
+ax.bar(x, trade_rec,       width, bottom=bot1, color=COLORS["trade_rec"],    linewidth=0, zorder=2)
+ax.bar(x, contract_assets, width, bottom=bot2, color=COLORS["contract_ast"], linewidth=0, zorder=2)
+ax.bar(x, inventories,     width, bottom=bot3, color=COLORS["inventories"],  linewidth=0, zorder=2)
+ 
+# ── Negative stack (offsets) ─────────────────────────────────────────────────
+neg_tp  = [-v for v in trade_pay]
+neg_cl  = [-v for v in contract_lib]
+bot_neg = np.array(neg_tp, dtype=float)
+ 
+ax.bar(x, neg_tp, width, bottom=np.zeros(len(years)), color=COLORS["trade_pay"],    linewidth=0, zorder=2)
+ax.bar(x, neg_cl, width, bottom=bot_neg,               color=COLORS["contract_lib"], linewidth=0, zorder=2)
+ 
+# ── Net funding gap line ──────────────────────────────────────────────────────
+ax.plot(
+    x, net_gap,
+    color=COLORS["net_gap"], linewidth=2.2, zorder=5,
+    marker="o", markersize=5.5,
+    markerfacecolor=COLORS["net_gap"],
+    markeredgecolor="white", markeredgewidth=1.4,
+)
+ 
+# ── Zero line ────────────────────────────────────────────────────────────────
+ax.axhline(0, color=COLORS["zero_line"], linewidth=0.9, zorder=3)
+ 
+# ── Grid (horizontal only, behind bars) ──────────────────────────────────────
+ax.yaxis.grid(True, color=COLORS["grid"], linewidth=0.7, zorder=0)
+ax.set_axisbelow(True)
+ 
+# ── Axes formatting ───────────────────────────────────────────────────────────
+ax.set_xticks(x)
+ax.set_xticklabels(years, fontsize=TICK_SIZE, color=COLORS["axis_text"])
+ax.tick_params(axis="both", which="both", length=0)
+ 
+def fmt_bn(v, _):
+    if v == 0:
+        return "0"
+    sign = "−" if v < 0 else ""
+    return f"{sign}€{abs(v / 1000):.1f}bn"
+ 
+ax.yaxis.set_major_formatter(mticker.FuncFormatter(fmt_bn))
+ax.tick_params(axis="y", labelsize=TICK_SIZE, labelcolor=COLORS["axis_text"])
+ 
+# ── Title & subtitle ─────────────────────────────────────────────────────────
+fig.text(
+    MARGINS["left"], 0.975,
+    "Funding-gap composition, 2018–2025",
+    fontsize=TITLE_SIZE, fontweight="bold", color="#1a1a1a", ha="left",
+    va="bottom",
+)
+fig.text(
+    MARGINS["left"], 0.945,
+    "€m  ·  Prysmian Group annual reports",
+    fontsize=LABEL_SIZE - 1, color=COLORS["axis_text"], ha="left",
+    va="bottom",
+)
+ 
+# ── Legend ────────────────────────────────────────────────────────────────────
+legend_handles = [
+    mpatches.Patch(color=COLORS["trade_rec"],    label="Trade receivables"),
+    mpatches.Patch(color=COLORS["contract_ast"], label="Contract assets"),
+    mpatches.Patch(color=COLORS["inventories"],  label="Inventories"),
+    mpatches.Patch(color=COLORS["trade_pay"],    label="Trade payables (offset)"),
+    mpatches.Patch(color=COLORS["contract_lib"], label="Contract liabilities (offset)"),
+    plt.Line2D(
+        [0], [0], color=COLORS["net_gap"], linewidth=2,
+        marker="o", markersize=5, markerfacecolor=COLORS["net_gap"],
+        markeredgecolor="white", markeredgewidth=1.2,
+        label="Net funding requirement",
+    ),
+]
+ax.legend(
+    handles=legend_handles,
+    loc="lower center",
+    bbox_to_anchor=(0.5, -0.20),
+    ncol=3,
+    fontsize=LABEL_SIZE - 1,
+    frameon=False,
+    handlelength=1.4,
+    handleheight=0.9,
+    columnspacing=1.4,
+    labelcolor="#444444",
+)
+ 
+# ── Source note ───────────────────────────────────────────────────────────────
+fig.text(
+    MARGINS["left"], 0.02,
+    "Sources: Prysmian Annual Reports 2018–2025. Contract assets mapped from construction-contract "
+    "notes (2018–2024) and IFRS 15 disclosures (2025). 2024 figures are restated comparatives.",
+    fontsize=NOTE_SIZE, color=COLORS["note_text"], ha="left", va="bottom",
+)
+ 
+plt.savefig(
+    "visual_1_funding_gap_composition.png",
+    dpi=DPI, bbox_inches="tight", facecolor="white",
+)
+print("Saved.")

@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="860" viewBox="0 0 1220 860">
+  <style>
+    .title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0A2540; letter-spacing: -0.2px; }
+    .subtitle { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #5E6B78; }
+    .section { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #0A2540; letter-spacing: 1.8px; }
+
+    .card-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #0A2540; }
+    .card-sub { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10.5px; font-weight: 400; fill: #6E6E6E; }
+    .card-kicker { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 9px; font-weight: 700; fill: #8B1E2D; letter-spacing: 1.2px; }
+
+    .metric-big { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #8B1E2D; }
+    .metric-mid { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #8B1E2D; }
+    .metric-dark { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #0A2540; }
+    .metric-white { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: middle; }
+
+    .label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10.5px; font-weight: 600; fill: #0A2540; }
+    .label-soft { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 400; fill: #6E6E6E; }
+    .axis { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 9.5px; font-weight: 600; fill: #5E6B78; text-anchor: middle; }
+    .note-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #0A2540; }
+    .note-text { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #0A2540; }
+
+    .panel { fill: #F7F9FC; stroke: #D9E2EC; stroke-width: 1; }
+    .panel-line { fill: #8B1E2D; }
+    .soft-fill { fill: #EEF2F6; }
+    .soft-stroke { stroke: #D9E2EC; stroke-width: 1; }
+    .grid { stroke: #E3EAF1; stroke-width: 1; }
+    .accent { fill: #8B1E2D; }
+    .accent-orange { fill: #C65D1E; }
+    .accent-light { fill: #F3E5DE; }
+    .blue-fill { fill: #DCE5EF; }
+    .blue-line { stroke: #0A2540; stroke-width: 1.2; }
+    .red-line { stroke: #8B1E2D; stroke-width: 2; }
+    .orange-line { stroke: #C65D1E; stroke-width: 2; }
+  </style>
+
+  <!-- Background -->
+
+  <!-- Header -->
+  <rect x="36" y="28" width="60" height="4" class="panel-line"/>
+  <text class="title" x="36" y="62">Quarterly KPI dashboard: Recommended Finance Committee framework</text>
+  <text class="subtitle" x="36" y="84">Six quarterly KPIs track liquidity efficiency, SPV execution, credit protection, pool quality, and the economics of Track B. Each card shows the threshold the Committee should monitor.</text>
+  <text class="section" x="36" y="120">QUARTERLY MONITORING KPIs</text>
+
+  <!-- Top right summary -->
+  <rect x="1006" y="104" width="178" height="28" rx="14" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <text class="label" x="1095" y="122" text-anchor="middle">6 KPIs reviewed quarterly</text>
+
+  <!-- ====================== CARD 1 ====================== -->
+  <rect x="36" y="154" width="364" height="250" rx="2" class="panel"/>
+  <rect x="36" y="154" width="364" height="6" class="panel-line"/>
+  <circle cx="62" cy="185" r="13" class="accent"/>
+  <text class="metric-white" x="62" y="185">1</text>
+  <text class="card-kicker" x="86" y="189">WORKING CAPITAL</text>
+  <text class="card-title" x="54" y="220">NFR days</text>
+  <text class="card-sub" x="54" y="240">
+    <tspan x="54" y="240">Step-down target for the working-capital cycle</tspan>
+    <tspan x="54" dy="14"></tspan>
+  </text>
+
+  <!-- step-down visual -->
+  <rect x="58" y="285" width="82" height="54" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <text class="label-soft" x="99" y="304" text-anchor="middle">Current path</text>
+  <text class="metric-big" x="99" y="327" text-anchor="middle">13+</text>
+
+  <rect x="165" y="270" width="82" height="69" rx="2" fill="#F3E5DE" stroke="#E4C5B2" stroke-width="1"/>
+  <text class="label-soft" x="206" y="289" text-anchor="middle">FY28 target</text>
+  <text class="metric-big" x="206" y="314" text-anchor="middle">≤10</text>
+
+  <rect x="272" y="252" width="82" height="87" rx="2" fill="#FCE8E6" stroke="#E7C1BC" stroke-width="1"/>
+  <text class="label-soft" x="313" y="271" text-anchor="middle">FY30 target</text>
+  <text class="metric-big" x="313" y="300" text-anchor="middle">≤5</text>
+
+  <line x1="140" y1="312" x2="165" y2="304" class="red-line"/>
+  <line x1="247" y1="304" x2="272" y2="293" class="red-line"/>
+
+  <rect x="54" y="356" width="328" height="28" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <text class="label" x="66" y="374">Quarterly test:</text>
+  <text class="label-soft" x="151" y="374">on track to ≤10 by FY28 and ≤5 by FY30</text>
+
+  <!-- ====================== CARD 2 ====================== -->
+  <rect x="428" y="154" width="364" height="250" rx="2" class="panel"/>
+  <rect x="428" y="154" width="364" height="6" class="panel-line"/>
+  <circle cx="454" cy="185" r="13" class="accent"/>
+  <text class="metric-white" x="454" y="185">2</text>
+  <text class="card-kicker" x="478" y="189">SPV EXECUTION</text>
+  <text class="card-title" x="446" y="220">SPV drawn vs eligible pool</text>
+  <text class="card-sub" x="446" y="240">
+    <tspan x="446" y="240">Programme utilisation target by ramp year three</tspan>
+    <tspan x="446" dy="14"></tspan>
+  </text>
+
+  <!-- bar visual -->
+  <rect x="458" y="286" width="300" height="26" rx="13" fill="#EEF2F6" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="458" y="286" width="255" height="26" rx="13" class="accent"/>
+  <text class="metric-white" x="586" y="299">≥85% drawn</text>
+  <text class="axis" x="458" y="326" text-anchor="start">0%</text>
+  <text class="axis" x="713" y="326">85%</text>
+  <text class="axis" x="758" y="326" text-anchor="end">100%</text>
+  <line x1="713" y1="280" x2="713" y2="318" class="orange-line"/>
+
+  <rect x="458" y="348" width="128" height="24" rx="12" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <text class="label" x="522" y="364" text-anchor="middle">Eligible pool base</text>
+  <rect x="602" y="348" width="156" height="24" rx="12" fill="#FCE8E6" stroke="#E7C1BC" stroke-width="1"/>
+  <text class="label" x="680" y="364" text-anchor="middle">Minimum draw ≥85%</text>
+
+  <!-- ====================== CARD 3 ====================== -->
+  <rect x="820" y="154" width="364" height="250" rx="2" class="panel"/>
+  <rect x="820" y="154" width="364" height="6" class="panel-line"/>
+  <circle cx="846" cy="185" r="13" class="accent"/>
+  <text class="metric-white" x="846" y="185">3</text>
+  <text class="card-kicker" x="870" y="189">CREDIT PROTECTION</text>
+  <text class="card-title" x="838" y="220">S&amp;P adjusted FFO / debt</text>
+  <text class="card-sub" x="838" y="240">
+    <tspan x="838" y="240">Minimum credit threshold from FY26 onward</tspan>
+    <tspan x="838" dy="14"></tspan>
+  </text>
+
+  <!-- threshold scale -->
+  <line x1="856" y1="302" x2="1148" y2="302" class="blue-line"/>
+  <line x1="856" y1="294" x2="856" y2="310" class="grid"/>
+  <line x1="954" y1="294" x2="954" y2="310" class="grid"/>
+  <line x1="1052" y1="286" x2="1052" y2="318" class="red-line"/>
+  <line x1="1148" y1="294" x2="1148" y2="310" class="grid"/>
+  <text class="axis" x="856" y="326">30%</text>
+  <text class="axis" x="954" y="326">40%</text>
+  <text class="axis" x="1052" y="326">45%</text>
+  <text class="axis" x="1148" y="326">50%</text>
+
+  <rect x="1008" y="258" width="88" height="22" rx="11" fill="#FCE8E6" stroke="#E7C1BC" stroke-width="1"/>
+  <text class="label" x="1052" y="273" text-anchor="middle">Target ≥45%</text>
+
+  <rect x="856" y="348" width="292" height="24" rx="12" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <text class="label" x="1002" y="364" text-anchor="middle">Quarterly test: remain at or above 45%</text>
+
+  <!-- ====================== CARD 4 ====================== -->
+  <rect x="36" y="442" width="364" height="250" rx="2" class="panel"/>
+  <rect x="36" y="442" width="364" height="6" class="panel-line"/>
+  <circle cx="62" cy="473" r="13" class="accent"/>
+  <text class="metric-white" x="62" y="473">4</text>
+  <text class="card-kicker" x="86" y="477">LEVERAGE DISCIPLINE</text>
+  <text class="card-title" x="54" y="508">Moody’s-adjusted ND / EBITDA</text>
+  <text class="card-sub" x="54" y="528">
+    <tspan x="54" y="528">Target to move inside the CMD band by FY28</tspan>
+    <tspan x="54" dy="14"></tspan>
+  </text>
+
+  <!-- band gauge -->
+  <rect x="58" y="582" width="300" height="22" rx="11" fill="#EEF2F6" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="208" y="582" width="75" height="22" rx="11" class="accent-orange" opacity="0.85"/>
+  <line x1="208" y1="576" x2="208" y2="610" class="orange-line"/>
+  <line x1="283" y1="576" x2="283" y2="610" class="orange-line"/>
+
+  <text class="axis" x="58" y="620" text-anchor="start">0.0x</text>
+  <text class="axis" x="133" y="620">0.5x</text>
+  <text class="axis" x="208" y="620">1.0x</text>
+  <text class="axis" x="283" y="620">1.5x</text>
+  <text class="axis" x="358" y="620" text-anchor="end">2.0x</text>
+
+  <rect x="216" y="548" width="60" height="22" rx="11" fill="#F3E5DE" stroke="#E4C5B2" stroke-width="1"/>
+  <text class="label" x="246" y="563" text-anchor="middle">CMD band</text>
+
+  <rect x="54" y="644" width="328" height="28" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <text class="label" x="66" y="662">Quarterly test:</text>
+  <text class="label-soft" x="151" y="662">within 1.0x–1.5x by FY28</text>
+
+  <!-- ====================== CARD 5 ====================== -->
+  <rect x="428" y="442" width="364" height="250" rx="2" class="panel"/>
+  <rect x="428" y="442" width="364" height="6" class="panel-line"/>
+  <circle cx="454" cy="473" r="13" class="accent"/>
+  <text class="metric-white" x="454" y="473">5</text>
+  <text class="card-kicker" x="478" y="477">POOL QUALITY</text>
+  <text class="card-title" x="446" y="508">Single-obligor concentration</text>
+  <text class="card-sub" x="446" y="528">
+    <tspan x="446" y="528">Maximum exposure to any one obligor in the pool</tspan>
+    <tspan x="446" dy="14"></tspan>
+  </text>
+
+  <!-- 10 block visual -->
+  <rect x="458" y="586" width="24" height="38" rx="2" class="accent"/>
+  <rect x="488" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="518" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="548" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="578" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="608" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="638" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="668" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="698" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+  <rect x="728" y="586" width="24" height="38" rx="2" class="soft-fill" stroke="#D9E2EC" stroke-width="1"/>
+
+  <text class="metric-mid" x="458" y="568">≤10%</text>
+  <text class="label-soft" x="458" y="642">1 out of 10 highlighted = maximum share for any single obligor</text>
+
+  <rect x="458" y="654" width="294" height="24" rx="12" fill="#FCE8E6" stroke="#E7C1BC" stroke-width="1"/>
+  <text class="label" x="605" y="670" text-anchor="middle">No single obligor should exceed 10%</text>
+
+  <!-- ====================== CARD 6 ====================== -->
+  <rect x="820" y="442" width="364" height="250" rx="2" class="panel"/>
+  <rect x="820" y="442" width="364" height="6" class="panel-line"/>
+  <circle cx="846" cy="473" r="13" class="accent"/>
+  <text class="metric-white" x="846" y="473">6</text>
+  <text class="card-kicker" x="870" y="477">TRACK B ECONOMICS</text>
+  <text class="card-title" x="838" y="508">Cash pulled forward / margin conceded</text>
+  <text class="card-sub" x="838" y="528">
+    <tspan x="838" y="528">Discounted economics test for Track B</tspan>
+    <tspan x="838" dy="14"></tspan>
+  </text>
+
+  <!-- ratio bars -->
+  <text class="label" x="856" y="562">Margin conceded</text>
+  <rect x="856" y="572" width="40" height="18" rx="9" class="accent-orange"/>
+  <text class="metric-white" x="876" y="582">1x</text>
+
+  <text class="label" x="856" y="615">Cash pulled forward</text>
+  <rect x="856" y="625" width="245" height="18" rx="9" class="accent"/>
+  <text class="metric-white" x="978" y="634">≥15x</text>
+
+  <line x1="856" y1="658" x2="1101" y2="658" class="blue-line"/>
+  <line x1="896" y1="652" x2="896" y2="664" class="orange-line"/>
+  <line x1="1101" y1="650" x2="1101" y2="666" class="red-line"/>
+  <text class="axis" x="896" y="676">1x</text>
+  <text class="axis" x="1101" y="676">15x</text>
+
+  <!-- Bottom insight panel -->
+  <rect x="36" y="724" width="1148" height="96" rx="2" class="panel"/>
+  <rect x="36" y="724" width="6" height="96" class="panel-line"/>
+  <text class="note-title" x="58" y="752">How to use this dashboard</text>
+  <text class="note-text" x="58" y="776">These six KPIs cover the full control framework: liquidity efficiency, programme ramp-up, external credit protection, leverage discipline, pool diversification, and Track B economic value.</text>
+  <text class="note-text" x="58" y="798">A simple quarterly review can flag whether Prysmian remains on plan, whether corrective action is needed.</text>
+</svg>

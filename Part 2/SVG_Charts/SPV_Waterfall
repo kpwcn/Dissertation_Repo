@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="520" viewBox="0 0 680 520">
+<style>
+.title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #0A2540; letter-spacing: -0.2px; }
+.subtitle { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #6E6E6E; }
+.section { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #0A2540; letter-spacing: 1.5px; }
+.value { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #FFFFFF; }
+.value-final { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+.bar-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #0A2540; }
+.bar-sub { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 400; fill: #6E6E6E; }
+.bar-src { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 500; fill: #00A651; letter-spacing: 0.3px; }
+.source { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 400; fill: #9CA3AF; }
+.footer { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #3D3D3A; }
+</style>
+
+<rect x="40" y="24" width="48" height="3" fill="#003D7A"/>
+<text class="title" x="40" y="54">SPV pool-sizing waterfall, FY26 base case</text>
+<text class="subtitle" x="40" y="74">€m, starting from gross trade receivables and applying five deductions</text>
+
+<rect x="40" y="100" width="80" height="220" fill="#003D7A"/>
+<text class="value" x="80" y="222" text-anchor="middle">3,039</text>
+
+<rect x="140" y="210" width="80" height="110" fill="#0071B8"/>
+<text class="value" x="180" y="272" text-anchor="middle">1,519</text>
+
+<rect x="240" y="232" width="80" height="88" fill="#0071B8"/>
+<text class="value" x="280" y="282" text-anchor="middle">1,215</text>
+
+<rect x="340" y="246" width="80" height="74" fill="#0071B8"/>
+<text class="value" x="380" y="289" text-anchor="middle">1,033</text>
+
+<rect x="440" y="298" width="80" height="22" fill="#00A651"/>
+<text class="value-final" x="480" y="314" text-anchor="middle">310</text>
+
+<rect x="540" y="306" width="80" height="14" fill="#00A651"/>
+<text class="value-final" x="580" y="317" text-anchor="middle" style="font-size: 11px;">131</text>
+
+<line x1="120" y1="210" x2="140" y2="210" stroke="#B8C2CC" stroke-width="0.8" stroke-dasharray="3 2"/>
+<line x1="220" y1="232" x2="240" y2="232" stroke="#B8C2CC" stroke-width="0.8" stroke-dasharray="3 2"/>
+<line x1="320" y1="246" x2="340" y2="246" stroke="#B8C2CC" stroke-width="0.8" stroke-dasharray="3 2"/>
+<line x1="420" y1="298" x2="440" y2="298" stroke="#B8C2CC" stroke-width="0.8" stroke-dasharray="3 2"/>
+<line x1="520" y1="306" x2="540" y2="306" stroke="#B8C2CC" stroke-width="0.8" stroke-dasharray="3 2"/>
+
+<line x1="40" y1="332" x2="620" y2="332" stroke="#B8C2CC" stroke-width="0.5"/>
+
+<text class="bar-label" x="80" y="352" text-anchor="middle">Gross TR</text>
+<text class="bar-sub" x="80" y="368" text-anchor="middle">Starting pool</text>
+<text class="bar-src" x="80" y="385" text-anchor="middle">PRYSMIAN FY25</text>
+
+<text class="bar-label" x="180" y="352" text-anchor="middle">Candidate</text>
+<text class="bar-sub" x="180" y="368" text-anchor="middle">50% share</text>
+<text class="bar-src" x="180" y="385" text-anchor="middle">AFME 2024</text>
+
+<text class="bar-label" x="280" y="352" text-anchor="middle">Haircut</text>
+<text class="bar-sub" x="280" y="368" text-anchor="middle">20% cushion</text>
+<text class="bar-src" x="280" y="385" text-anchor="middle">S&amp;P 2021</text>
+
+<text class="bar-label" x="380" y="352" text-anchor="middle">Advance rate</text>
+<text class="bar-sub" x="380" y="368" text-anchor="middle">85% funded</text>
+<text class="bar-src" x="380" y="385" text-anchor="middle">FINACITY 2023</text>
+
+<text class="bar-label" x="480" y="352" text-anchor="middle">Adoption</text>
+<text class="bar-sub" x="480" y="368" text-anchor="middle">30% in FY26</text>
+<text class="bar-src" x="480" y="385" text-anchor="middle">MUFG 2024</text>
+
+<text class="bar-label" x="580" y="352" text-anchor="middle">Net of factor.</text>
+<text class="bar-sub" x="580" y="368" text-anchor="middle">Less €179m</text>
+<text class="bar-src" x="580" y="385" text-anchor="middle">NOTE 18 FY25</text>
+
+<rect x="40" y="420" width="3" height="64" fill="#00A651"/>
+<text class="footer" x="54" y="438" style="font-weight: 600;">FY31 steady-state cross-check</text>
+<text class="footer" x="54" y="456">Funded amount reaches €1,302m against a base of €4,507m, a 29% ratio that sits within</text>
+<text class="footer" x="54" y="472">AFME's 15% to 35% observed range for active European receivables programmes.</text>
+
+<text class="source" x="40" y="504">Source: Prysmian FY25 disclosures; AFME (2024); S&amp;P Trade Receivables Criteria (2021); Finacity (2023); MUFG (2024).</text>
+</svg>

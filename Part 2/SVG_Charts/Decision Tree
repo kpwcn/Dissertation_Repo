@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="820" viewBox="0 0 900 820">
+<style>
+.title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #0A2540; letter-spacing: -0.2px; }
+.subtitle { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #6E6E6E; }
+.section { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #0A2540; letter-spacing: 1.5px; }
+.node-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #FFFFFF; letter-spacing: 1.2px; opacity: 0.85; }
+.node-detail { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #FFFFFF; opacity: 0.92; }
+.node-detail-soft { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 400; fill: #FFFFFF; opacity: 0.72; }
+.start-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #FFFFFF; letter-spacing: 0.3px; }
+.end-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #FFFFFF; letter-spacing: 0.3px; }
+.arrow-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #0A2540; letter-spacing: 0.6px; }
+.arrow-label-fail { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #6E6E6E; letter-spacing: 0.6px; }
+.kill-heading { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #FFFFFF; letter-spacing: 0.2px; }
+.kill-sub { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 400; fill: #FFFFFF; opacity: 0.82; }
+.mon-kpi-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #0A2540; letter-spacing: 1.2px; }
+.mon-kpi { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #0A2540; }
+.mon-kpi-em { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #0A2540; }
+</style>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#B8C2CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<rect x="40" y="24" width="48" height="3" fill="#003D7A"/>
+<text class="title" x="40" y="54">Decision tree: gated path from authorisation to steady state</text>
+<text class="subtitle" x="40" y="74">Three gates, KPI-driven kill criteria. Success path runs centre. Degraded outcomes branch right.</text>
+
+<text class="section" x="40" y="116">PROGRAMME GOVERNANCE</text>
+
+<!-- START node (centred at x=420) -->
+<rect x="280" y="140" width="280" height="42" rx="2" fill="#0A2540"/>
+<text class="start-label" x="420" y="167" text-anchor="middle">Programme authorised by Board</text>
+
+<line x1="420" y1="182" x2="420" y2="212" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- GATE 1: 360px wide, centred at 420 -->
+<rect x="240" y="216" width="360" height="120" rx="2" fill="#003D7A"/>
+<text class="node-title" x="256" y="238">GATE 1 · PRE-LAUNCH READINESS</text>
+<line x1="256" y1="246" x2="584" y2="246" stroke="#FFFFFF" stroke-width="0.6" opacity="0.3"/>
+<text class="node-detail" x="256" y="266">Moody's indicative rating on SPV notes</text>
+<text class="node-detail" x="256" y="284">True-sale opinions across six jurisdictions</text>
+<text class="node-detail" x="256" y="302">ABCP spreads within 200bps of Euribor</text>
+<text class="node-detail-soft" x="256" y="322">Board approval for €4–6m upfront structuring spend</text>
+
+<line x1="420" y1="336" x2="420" y2="370" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text class="arrow-label" x="432" y="359">PASS</text>
+
+<path d="M600,276 L680,276" fill="none" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text class="arrow-label-fail" x="616" y="270">FAIL</text>
+
+<rect x="680" y="252" width="180" height="58" rx="2" fill="#6E6E6E"/>
+<text class="kill-heading" x="770" y="275" text-anchor="middle">Restructure or defer</text>
+<text class="kill-sub" x="770" y="291" text-anchor="middle">Rework legal structure;</text>
+<text class="kill-sub" x="770" y="303" text-anchor="middle">re-engage rating agencies</text>
+
+<!-- GATE 2 -->
+<rect x="240" y="374" width="360" height="120" rx="2" fill="#003D7A"/>
+<text class="node-title" x="256" y="396">GATE 2 · FIRST MILESTONE (M12)</text>
+<line x1="256" y1="404" x2="584" y2="404" stroke="#FFFFFF" stroke-width="0.6" opacity="0.3"/>
+<text class="node-detail" x="256" y="424">First SPV draw executed at €200–300m</text>
+<text class="node-detail" x="256" y="442">First Redesign contract signed at ≤6bps concession</text>
+<text class="node-detail" x="256" y="460">FFO/debt trajectory ≥40% at end-2025</text>
+<text class="node-detail-soft" x="256" y="480">Single-obligor concentration ≤10% of pool</text>
+
+<line x1="420" y1="494" x2="420" y2="528" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text class="arrow-label" x="432" y="517">PASS</text>
+
+<path d="M600,434 L680,434" fill="none" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text class="arrow-label-fail" x="616" y="428">FAIL</text>
+
+<rect x="680" y="408" width="180" height="62" rx="2" fill="#6E6E6E"/>
+<text class="kill-heading" x="770" y="430" text-anchor="middle">Single-track fallback</text>
+<text class="kill-sub" x="770" y="446" text-anchor="middle">SPV fail → Track B solo</text>
+<text class="kill-sub" x="770" y="460" text-anchor="middle">Redesign fail → Track A solo</text>
+
+<!-- MONITORING BAND -->
+<rect x="80" y="532" width="600" height="84" rx="2" fill="none" stroke="#003D7A" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text class="mon-kpi-title" x="100" y="554">ONGOING MONITORING · M12 TO M24</text>
+<line x1="100" y1="562" x2="660" y2="562" stroke="#003D7A" stroke-width="0.5" opacity="0.3"/>
+<text class="mon-kpi" x="100" y="580">Quarterly KPIs reported to Finance Committee:</text>
+<text class="mon-kpi-em" x="100" y="600">NFR days · SPV utilisation vs 85% · Track B cap · FFO/debt · pool concentration</text>
+
+<path d="M695,574 L770,574" fill="none" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text class="arrow-label-fail" x="700" y="568">TRIGGER</text>
+
+<rect x="770" y="548" width="90" height="52" rx="2" fill="#6E6E6E"/>
+<text class="kill-sub" x="815" y="568" text-anchor="middle">Programme</text>
+<text class="kill-sub" x="815" y="582" text-anchor="middle">pause and</text>
+<text class="kill-sub" x="815" y="596" text-anchor="middle">escalate</text>
+
+<line x1="420" y1="616" x2="420" y2="646" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- GATE 3: wider 360px -->
+<rect x="240" y="650" width="360" height="90" rx="2" fill="#003D7A"/>
+<text class="node-title" x="256" y="672">GATE 3 · SCALE DECISION (M25–M36)</text>
+<line x1="256" y1="680" x2="584" y2="680" stroke="#FFFFFF" stroke-width="0.6" opacity="0.3"/>
+<text class="node-detail" x="256" y="700">Track B concession distribution from 3+ contracts</text>
+<text class="node-detail-soft" x="256" y="720">&lt;10bps cluster → scale; near Sibilkov mean → terminate</text>
+
+<line x1="420" y1="740" x2="420" y2="770" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text class="arrow-label" x="432" y="761">&lt; 10bps</text>
+
+<path d="M600,690 L680,690" fill="none" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text class="arrow-label-fail" x="614" y="684">≥ 10bps</text>
+
+<rect x="680" y="666" width="180" height="50" rx="2" fill="#6E6E6E"/>
+<text class="kill-heading" x="770" y="688" text-anchor="middle">Terminate Track B</text>
+<text class="kill-sub" x="770" y="704" text-anchor="middle">Track A continues at steady state</text>
+
+<rect x="280" y="772" width="280" height="44" rx="2" fill="#00A651"/>
+<text class="end-label" x="420" y="799" text-anchor="middle">Full hybrid at steady state</text>
+</svg>

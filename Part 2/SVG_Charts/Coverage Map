@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="620" viewBox="0 0 820 620">
+<style>
+.title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #0A2540; letter-spacing: -0.2px; }
+.subtitle { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #6E6E6E; }
+.section { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #0A2540; letter-spacing: 1.5px; }
+.box-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #FFFFFF; letter-spacing: 0.2px; }
+.box-sub { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #FFFFFF; opacity: 0.82; }
+.bar-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #FFFFFF; letter-spacing: 0.2px; }
+.bar-tag { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #FFFFFF; opacity: 0.85; letter-spacing: 0.4px; }
+.inv-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #0A2540; letter-spacing: 0.2px; }
+.inv-tag { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #00A651; letter-spacing: 0.6px; }
+.tp-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #FFFFFF; letter-spacing: 0.2px; }
+.tp-tag { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #FFFFFF; opacity: 0.78; letter-spacing: 0.4px; }
+.lever { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #FFFFFF; opacity: 0.92; }
+.callout-lead { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #0A2540; letter-spacing: 0.2px; }
+.callout-body { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #6E6E6E; }
+.legend { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 9px; font-weight: 400; fill: #6E6E6E; }
+</style>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#B8C2CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<rect x="40" y="24" width="48" height="3" fill="#003D7A"/>
+<text class="title" x="40" y="54">Coverage map: where the two tracks reach</text>
+<text class="subtitle" x="40" y="74">Track A acts on one NFR component; Track B acts on three; inventories sit outside either tool</text>
+
+<text class="section" x="40" y="116">TRACKS</text>
+<text class="section" x="400" y="116">NFR COMPONENTS</text>
+
+<!-- Track A box -->
+<rect x="40" y="130" width="280" height="70" rx="2" fill="#0071B8"/>
+<text class="box-title" x="180" y="162" text-anchor="middle">Track A</text>
+<text class="box-sub" x="180" y="182" text-anchor="middle">SPV securitisation</text>
+
+<!-- Track B box -->
+<rect x="40" y="230" width="280" height="200" rx="2" fill="#00A651"/>
+<text class="box-title" x="180" y="262" text-anchor="middle">Track B</text>
+<text class="box-sub" x="180" y="282" text-anchor="middle">Contract redesign</text>
+<line x1="60" y1="298" x2="300" y2="298" stroke="#FFFFFF" stroke-width="0.6" opacity="0.35"/>
+<text class="lever" x="60" y="328">Milestone acceleration</text>
+<text class="lever" x="60" y="368">Shorter payment terms (DSO)</text>
+<text class="lever" x="60" y="408">Larger customer advances</text>
+
+<!-- NFR bars: wider canvas (400 to 780) = 380px each, with breathing room for tags -->
+<rect x="400" y="130" width="380" height="44" rx="2" fill="#003D7A"/>
+<text class="bar-label" x="418" y="157">Contract assets</text>
+<text class="bar-tag" x="762" y="157" text-anchor="end">TRACK B · MILESTONE</text>
+
+<rect x="400" y="190" width="380" height="44" rx="2" fill="#003D7A"/>
+<text class="bar-label" x="418" y="217">Trade receivables</text>
+<text class="bar-tag" x="762" y="217" text-anchor="end">TRACKS A AND B</text>
+
+<rect x="400" y="250" width="380" height="44" rx="2" fill="#003D7A"/>
+<text class="bar-label" x="418" y="277">Contract liabilities</text>
+<text class="bar-tag" x="762" y="277" text-anchor="end">TRACK B · ADVANCES</text>
+
+<!-- Inventories: dashed callout -->
+<rect x="400" y="310" width="380" height="44" rx="2" fill="none" stroke="#00A651" stroke-width="1.6" stroke-dasharray="5 3"/>
+<text class="inv-label" x="418" y="337">Inventories</text>
+<text class="inv-tag" x="762" y="337" text-anchor="end">UNTOUCHED · STRUCTURAL GAP</text>
+
+<!-- TP: muted -->
+<rect x="400" y="370" width="380" height="44" rx="2" fill="#6E6E6E"/>
+<text class="tp-label" x="418" y="397">Trade payables</text>
+<text class="tp-tag" x="762" y="397" text-anchor="end">OUT OF SCOPE</text>
+
+<!-- Arrows -->
+<path d="M320,165 L385,165 L385,200 L400,200" fill="none" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M320,328 L355,328 L355,152 L400,152" fill="none" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M320,368 L370,368 L370,224 L400,224" fill="none" stroke="#B8C2CC" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<path d="M320,408 L378,408 L378,272 L400,272" fill="none" stroke="#B8C2CC" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Bottom callout -->
+<line x1="40" y1="470" x2="40" y2="570" stroke="#00A651" stroke-width="3"/>
+<text class="callout-lead" x="56" y="490">Structural coverage gap</text>
+<text class="callout-body" x="56" y="514">Inventories of approximately €3bn on the FY25 balance sheet remain outside the toolkit. Neither track in the</text>
+<text class="callout-body" x="56" y="532">proposed programme monetises raw materials or work-in-progress, a limitation that would require separate</text>
+<text class="callout-body" x="56" y="550">instruments such as inventory finance or supply-chain finance to address in a later strategic phase.</text>
+
+<!-- Legend -->
+<line x1="40" y1="596" x2="58" y2="596" stroke="#B8C2CC" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text class="legend" x="66" y="599">Dashed arrow: Track B lever sharing a destination component with Track A</text>
+</svg>

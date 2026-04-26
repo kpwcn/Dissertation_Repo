@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="760" viewBox="0 0 1220 760">
+  <style>
+    .title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0A2540; letter-spacing: -0.2px; }
+    .subtitle { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #5E6B78; }
+    .section { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #0A2540; letter-spacing: 1.8px; }
+
+    .header-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #0A2540; }
+    .year { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #0A2540; text-anchor: middle; }
+
+    .row-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #0A2540; }
+    .row-sub { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10.5px; font-weight: 400; fill: #6E6E6E; }
+
+    .value-nfr { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: middle; }
+    .value-days { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10.5px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: middle; }
+    .value-cost { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: middle; }
+
+    .note-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #0A2540; }
+    .note-text { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #0A2540; }
+
+    .grid { stroke: #E3EAF1; stroke-width: 1.2; }
+    .divider { stroke: #D5DEE7; stroke-width: 1.2; }
+    .panel { fill: #F7F9FC; stroke: #D9E2EC; stroke-width: 1; }
+    .header-fill { fill: #DCE5EF; }
+    .accent { fill: #8B1E2D; }
+    .circle { fill: #8B1E2D; }
+  </style>
+
+  <!-- Background -->
+
+  <!-- Header -->
+  <rect x="36" y="28" width="60" height="4" fill="#8B1E2D"/>
+  <text class="title" x="36" y="62">Baseline NFR projections: visual view of NFR, NFR days, and annual funding cost</text>
+  <text class="subtitle" x="36" y="84">Each column is one forecast year from FY2026E to FY2031E. Circle size scales within each metric row, while NFR days stay constant at 13 throughout.</text>
+
+  <text class="section" x="36" y="120">BASELINE PROJECTED METRICS</text>
+
+  <!-- Table-style header band -->
+  <rect x="36" y="140" width="1148" height="30" class="header-fill"/>
+  <text class="header-label" x="52" y="160">Metric</text>
+
+  <text class="year" x="310" y="160">FY 2026E</text>
+  <text class="year" x="462" y="160">FY 2027E</text>
+  <text class="year" x="614" y="160">FY 2028E</text>
+  <text class="year" x="766" y="160">FY 2029E</text>
+  <text class="year" x="918" y="160">FY 2030E</text>
+  <text class="year" x="1070" y="160">FY 2031E</text>
+
+  <!-- Structure lines -->
+
+  <line x1="36" y1="170" x2="1184" y2="170" class="grid"/>
+  <line x1="220" y1="310" x2="1184" y2="310" class="grid"/>
+  <line x1="220" y1="450" x2="1184" y2="450" class="grid"/>
+
+  <!-- Left labels -->
+  <text class="row-label" x="36" y="232">Baseline NFR (€m)</text>
+  <text class="row-sub" x="36" y="251">Larger circle = higher projected NFR</text>
+
+  <text class="row-label" x="36" y="372">Baseline NFR days</text>
+  <text class="row-sub" x="36" y="391">Flat at 13 days across all years</text>
+
+  <text class="row-label" x="36" y="512">Annual funding cost (€m)</text>
+  <text class="row-sub" x="36" y="531">Larger circle = higher annual cost</text>
+
+  <!-- Row 1: NFR -->
+  <circle class="circle" cx="310" cy="240" r="24"/>
+  <text class="value-nfr" x="310" y="240">872</text>
+
+  <circle class="circle" cx="462" cy="240" r="26"/>
+  <text class="value-nfr" x="462" y="240">969</text>
+
+  <circle class="circle" cx="614" cy="240" r="29"/>
+  <text class="value-nfr" x="614" y="240">1,081</text>
+
+  <circle class="circle" cx="766" cy="240" r="31"/>
+  <text class="value-nfr" x="766" y="240">1,174</text>
+
+  <circle class="circle" cx="918" cy="240" r="34"/>
+  <text class="value-nfr" x="918" y="240">1,272</text>
+
+  <circle class="circle" cx="1070" cy="240" r="36"/>
+  <text class="value-nfr" x="1070" y="240">1,314</text>
+
+  <!-- Row 2: NFR days -->
+  <circle class="circle" cx="310" cy="380" r="18"/>
+  <text class="value-days" x="310" y="380">13</text>
+
+  <circle class="circle" cx="462" cy="380" r="18"/>
+  <text class="value-days" x="462" y="380">13</text>
+
+  <circle class="circle" cx="614" cy="380" r="18"/>
+  <text class="value-days" x="614" y="380">13</text>
+
+  <circle class="circle" cx="766" cy="380" r="18"/>
+  <text class="value-days" x="766" y="380">13</text>
+
+  <circle class="circle" cx="918" cy="380" r="18"/>
+  <text class="value-days" x="918" y="380">13</text>
+
+  <circle class="circle" cx="1070" cy="380" r="18"/>
+  <text class="value-days" x="1070" y="380">13</text>
+
+  <!-- Row 3: Annual funding cost -->
+  <circle class="circle" cx="310" cy="520" r="20"/>
+  <text class="value-cost" x="310" y="520">39.2</text>
+
+  <circle class="circle" cx="462" cy="520" r="22"/>
+  <text class="value-cost" x="462" y="520">43.6</text>
+
+  <circle class="circle" cx="614" cy="520" r="25"/>
+  <text class="value-cost" x="614" y="520">48.7</text>
+
+  <circle class="circle" cx="766" cy="520" r="28"/>
+  <text class="value-cost" x="766" y="520">52.8</text>
+
+  <circle class="circle" cx="918" cy="520" r="31"/>
+  <text class="value-cost" x="918" y="520">57.3</text>
+
+  <circle class="circle" cx="1070" cy="520" r="33"/>
+  <text class="value-cost" x="1070" y="520">59.1</text>
+
+  <!-- Bottom insight box -->
+  <rect x="36" y="620" width="1148" height="86" rx="2" class="panel"/>
+  <rect x="36" y="620" width="6" height="86" class="accent"/>
+  <text class="note-title" x="58" y="650">Readout</text>
+  <text class="note-text" x="58" y="676">Baseline NFR rises steadily from €871.99m in FY2026E to €1,313.54m in FY2031E, and annual funding cost increases from €39.24m to €59.11m.</text>
+  <text class="note-text" x="58" y="696">By contrast, NFR days remain constant at 13 throughout the forecast period, so that row shows no size change.</text>
+</svg>

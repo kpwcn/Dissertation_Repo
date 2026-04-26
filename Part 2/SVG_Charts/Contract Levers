@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="480" viewBox="0 0 680 480">
+<style>
+.title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #0A2540; letter-spacing: -0.2px; }
+.subtitle { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #6E6E6E; }
+.section { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #0A2540; letter-spacing: 1.5px; }
+.box-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #FFFFFF; letter-spacing: 0.2px; }
+.box-sub { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #FFFFFF; opacity: 0.82; }
+.ghost-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #6E6E6E; letter-spacing: 0.2px; }
+.ghost-sub { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #9CA3AF; }
+.footer { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 500; fill: #0A2540; }
+</style>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#0A2540" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<rect x="40" y="24" width="48" height="3" fill="#003D7A"/>
+<text class="title" x="40" y="54">Option 1. Contract redesign lever map</text>
+<text class="subtitle" x="40" y="74">Each commercial concession moves one specific balance-sheet item; inventory is untouched</text>
+
+<text class="section" x="40" y="118">COMMERCIAL LEVER</text>
+<text class="section" x="420" y="118">BALANCE-SHEET EFFECT</text>
+
+<rect x="40" y="134" width="220" height="60" rx="2" fill="#0071B8"/>
+<text class="box-title" x="150" y="160" text-anchor="middle">Milestone acceleration</text>
+<text class="box-sub" x="150" y="180" text-anchor="middle">Earlier certification</text>
+
+<rect x="420" y="134" width="220" height="60" rx="2" fill="#00A651"/>
+<text class="box-title" x="530" y="160" text-anchor="middle">Contract assets down</text>
+<text class="box-sub" x="530" y="180" text-anchor="middle">25 bps of revenue</text>
+
+<line x1="262" y1="164" x2="418" y2="164" stroke="#0A2540" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+<rect x="40" y="214" width="220" height="60" rx="2" fill="#0071B8"/>
+<text class="box-title" x="150" y="240" text-anchor="middle">Larger customer advances</text>
+<text class="box-sub" x="150" y="260" text-anchor="middle">Higher upfront payment</text>
+
+<rect x="420" y="214" width="220" height="60" rx="2" fill="#00A651"/>
+<text class="box-title" x="530" y="240" text-anchor="middle">Contract liabilities up</text>
+<text class="box-sub" x="530" y="260" text-anchor="middle">50 bps of revenue</text>
+
+<line x1="262" y1="244" x2="418" y2="244" stroke="#0A2540" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+<rect x="40" y="294" width="220" height="60" rx="2" fill="#0071B8"/>
+<text class="box-title" x="150" y="320" text-anchor="middle">Shorter payment terms</text>
+<text class="box-sub" x="150" y="340" text-anchor="middle">Reduced DSO</text>
+
+<rect x="420" y="294" width="220" height="60" rx="2" fill="#00A651"/>
+<text class="box-title" x="530" y="320" text-anchor="middle">Trade receivables down</text>
+<text class="box-sub" x="530" y="340" text-anchor="middle">1 day improvement</text>
+
+<line x1="262" y1="324" x2="418" y2="324" stroke="#0A2540" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+<rect x="420" y="380" width="220" height="60" rx="2" fill="none" stroke="#B8C2CC" stroke-width="1" stroke-dasharray="5 3"/>
+<text class="ghost-title" x="530" y="406" text-anchor="middle">Inventory unchanged</text>
+<text class="ghost-sub" x="530" y="426" text-anchor="middle">Not a lever for this option</text>
+
+<rect x="40" y="380" width="3" height="60" fill="#00A651"/>
+<text class="footer" x="54" y="406">Each lever sized conservatively</text>
+<text class="subtitle" x="54" y="426">on an 8.5% portfolio adoption ramp</text>
+</svg>

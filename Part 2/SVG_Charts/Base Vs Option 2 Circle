@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="940" viewBox="0 0 1220 940">
+  <style>
+    .title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0A2540; letter-spacing: -0.2px; }
+    .subtitle { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #5E6B78; }
+    .section { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #0A2540; letter-spacing: 1.8px; }
+
+    .header-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #0A2540; }
+    .year { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #0A2540; text-anchor: middle; }
+
+    .row-label { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #0A2540; }
+    .row-sub { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10.5px; font-weight: 400; fill: #6E6E6E; }
+
+    .legend-text { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #0A2540; }
+    .circle-code { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 9.5px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: middle; letter-spacing: 0.2px; }
+
+    .base-value { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #8B1E2D; text-anchor: middle; }
+    .opt-value { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #1F5E4A; text-anchor: middle; }
+
+    .delta-chip { fill: #EEF2F6; stroke: #D9E2EC; stroke-width: 1; }
+    .delta-text { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #0A2540; text-anchor: middle; dominant-baseline: middle; }
+
+    .note-title { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #0A2540; }
+    .note-text { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: 400; fill: #0A2540; }
+
+    .grid { stroke: #E3EAF1; stroke-width: 1.2; }
+    .divider { stroke: #D5DEE7; stroke-width: 1.2; }
+    .panel { fill: #F7F9FC; stroke: #D9E2EC; stroke-width: 1; }
+    .header-fill { fill: #DCE5EF; }
+
+    .baseline { fill: #8B1E2D; }
+    .option2 { fill: #1F5E4A; }
+    .accent { fill: #1F5E4A; }
+  </style>
+
+
+  <rect x="36" y="28" width="60" height="4" fill="#1F5E4A"/>
+  <text class="title" x="36" y="62">Option 2 comparison: baseline vs SPV securitisation</text>
+  <text class="subtitle" x="36" y="84">Red shows baseline and dark green shows option 2. Δ is shown versus baseline; for these metrics, more negative is better.</text>
+
+  <text class="section" x="36" y="120">COMPARATIVE PROJECTED METRICS</text>
+
+  <rect x="680" y="106" width="54" height="20" rx="10" class="delta-chip"/>
+  <text class="delta-text" x="708" y="116">Δ</text>
+  <text class="legend-text" x="870" y="120" text-anchor="end">Difference vs baseline</text>
+
+  <circle cx="900" cy="116" r="15" class="baseline"/>
+  <text class="circle-code" x="900" y="116">B</text>
+  <text class="legend-text" x="922" y="120">Baseline</text>
+
+  <circle cx="1012" cy="116" r="14" class="option2"/>
+  <text class="circle-code" x="1012" y="116">O2</text>
+  <text class="legend-text" x="1032" y="120">Option 2</text>
+
+  <rect x="36" y="146" width="1148" height="36" class="header-fill"/>
+  <text class="header-label" x="52" y="169">Metric</text>
+  <text class="year" x="365" y="169">FY 2026E</text><text class="year" x="505" y="169">FY 2027E</text><text class="year" x="645" y="169">FY 2028E</text><text class="year" x="785" y="169">FY 2029E</text><text class="year" x="925" y="169">FY 2030E</text><text class="year" x="1065" y="169">FY 2031E</text>
+
+  <line x1="36" y1="182" x2="1184" y2="182" class="grid"/>
+  <line x1="36" y1="400" x2="1184" y2="400" class="grid"/>
+  <line x1="36" y1="632" x2="1184" y2="632" class="grid"/>
+  <line x1="36" y1="844" x2="1184" y2="844" class="grid"/>
+
+  <text class="row-label" x="36" y="252">NFR (€m)</text>
+  <text class="row-sub" x="36" y="274">
+    <tspan x="36" y="274">SPV securitisation sharply</tspan>
+    <tspan x="36" dy="14">reduces projected funding need</tspan>
+    <tspan x="36" dy="14">versus baseline</tspan>
+  </text>
+
+  <text class="row-label" x="36" y="490">NFR days</text>
+  <text class="row-sub" x="36" y="512">
+    <tspan x="36" y="512">Dark green circles shrink</tspan>
+    <tspan x="36" dy="14">rapidly as the working-capital</tspan>
+    <tspan x="36" dy="14">cycle shortens</tspan>
+  </text>
+
+  <text class="row-label" x="36" y="702">Annual funding cost (€m)</text>
+  <text class="row-sub" x="36" y="724">
+    <tspan x="36" y="724">Costs are above baseline in</tspan>
+    <tspan x="36" dy="14">FY2026–27, then modestly</tspan>
+    <tspan x="36" dy="14">below baseline from FY2028</tspan>
+  </text>
+
+  <!-- Row 1 -->
+  <rect x="335" y="206" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="365" y="217">-131</text>
+  <circle cx="333" cy="286" r="28.8" class="baseline"/>
+  <text class="circle-code" x="333" y="286">B</text>
+  <circle cx="397" cy="286" r="26.6" class="option2"/>
+  <text class="circle-code" x="397" y="286">O2</text>
+  <text class="base-value" x="333" y="336">872</text>
+  <text class="opt-value" x="397" y="336">741.0</text>
+
+  <rect x="475" y="206" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="505" y="217">-506</text>
+  <circle cx="473" cy="286" r="30.3" class="baseline"/>
+  <text class="circle-code" x="473" y="286">B</text>
+  <circle cx="537" cy="286" r="21.3" class="option2"/>
+  <text class="circle-code" x="537" y="286">O2</text>
+  <text class="base-value" x="473" y="336">969</text>
+  <text class="opt-value" x="537" y="336">462.6</text>
+
+  <rect x="615" y="206" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="645" y="217">-836</text>
+  <circle cx="613" cy="286" r="31.9" class="baseline"/>
+  <text class="circle-code" x="613" y="286">B</text>
+  <circle cx="677" cy="286" r="15.9" class="option2"/>
+  <text class="circle-code" x="677" y="286">O2</text>
+  <text class="base-value" x="613" y="336">1,081</text>
+  <text class="opt-value" x="677" y="336">244.8</text>
+
+  <rect x="755" y="206" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="785" y="217">-989</text>
+  <circle cx="753" cy="286" r="33.2" class="baseline"/>
+  <text class="circle-code" x="753" y="286">B</text>
+  <circle cx="817" cy="286" r="14.0" class="option2"/>
+  <text class="circle-code" x="817" y="286">O2</text>
+  <text class="base-value" x="753" y="336">1,174</text>
+  <text class="opt-value" x="817" y="336">184.7</text>
+
+  <rect x="895" y="206" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="925" y="217">-1,084</text>
+  <circle cx="893" cy="286" r="34.5" class="baseline"/>
+  <text class="circle-code" x="893" y="286">B</text>
+  <circle cx="957" cy="286" r="14.1" class="option2"/>
+  <text class="circle-code" x="957" y="286">O2</text>
+  <text class="base-value" x="893" y="336">1,272</text>
+  <text class="opt-value" x="957" y="336">187.9</text>
+
+  <rect x="1035" y="206" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="1065" y="217">-1,124</text>
+  <circle cx="1033" cy="286" r="35.0" class="baseline"/>
+  <text class="circle-code" x="1033" y="286">B</text>
+  <circle cx="1097" cy="286" r="14.2" class="option2"/>
+  <text class="circle-code" x="1097" y="286">O2</text>
+  <text class="base-value" x="1033" y="336">1,314</text>
+  <text class="opt-value" x="1097" y="336">190.2</text>
+
+  <!-- Row 2 -->
+  <rect x="335" y="444" width="64" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="365" y="455">-1.9d</text>
+  <circle cx="333" cy="524" r="26.0" class="baseline"/>
+  <text class="circle-code" x="333" y="524">B</text>
+  <circle cx="397" cy="524" r="24.7" class="option2"/>
+  <text class="circle-code" x="397" y="524">O2</text>
+  <text class="base-value" x="333" y="570">13.0</text>
+  <text class="opt-value" x="397" y="570">11.1</text>
+
+  <rect x="475" y="444" width="64" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="505" y="455">-7.3d</text>
+  <circle cx="473" cy="524" r="26.0" class="baseline"/>
+  <text class="circle-code" x="473" y="524">B</text>
+  <circle cx="537" cy="524" r="20.4" class="option2"/>
+  <text class="circle-code" x="537" y="524">O2</text>
+  <text class="base-value" x="473" y="570">13.0</text>
+  <text class="opt-value" x="537" y="570">5.7</text>
+
+  <rect x="615" y="444" width="64" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="645" y="455">-10.9d</text>
+  <circle cx="613" cy="524" r="26.0" class="baseline"/>
+  <text class="circle-code" x="613" y="524">B</text>
+  <circle cx="677" cy="524" r="16.1" class="option2"/>
+  <text class="circle-code" x="677" y="524">O2</text>
+  <text class="base-value" x="613" y="570">13.0</text>
+  <text class="opt-value" x="677" y="570">2.1</text>
+
+  <rect x="755" y="444" width="64" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="785" y="455">-11.8d</text>
+  <circle cx="753" cy="524" r="26.0" class="baseline"/>
+  <text class="circle-code" x="753" y="524">B</text>
+  <circle cx="817" cy="524" r="14.4" class="option2"/>
+  <text class="circle-code" x="817" y="524">O2</text>
+  <text class="base-value" x="753" y="570">13.0</text>
+  <text class="opt-value" x="817" y="570">1.2</text>
+
+  <rect x="895" y="444" width="64" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="925" y="455">-12.0d</text>
+  <circle cx="893" cy="524" r="26.0" class="baseline"/>
+  <text class="circle-code" x="893" y="524">B</text>
+  <circle cx="957" cy="524" r="14.0" class="option2"/>
+  <text class="circle-code" x="957" y="524">O2</text>
+  <text class="base-value" x="893" y="570">13.0</text>
+  <text class="opt-value" x="957" y="570">1.0</text>
+
+  <rect x="1035" y="444" width="64" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="1065" y="455">-12.0d</text>
+  <circle cx="1033" cy="524" r="26.0" class="baseline"/>
+  <text class="circle-code" x="1033" y="524">B</text>
+  <circle cx="1097" cy="524" r="14.0" class="option2"/>
+  <text class="circle-code" x="1097" y="524">O2</text>
+  <text class="base-value" x="1033" y="570">13.0</text>
+  <text class="opt-value" x="1097" y="570">1.0</text>
+
+  <!-- Row 3 -->
+  <rect x="335" y="656" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="365" y="667">+10.8</text>
+  <circle cx="333" cy="736" r="18.0" class="baseline"/>
+  <text class="circle-code" x="333" y="736">B</text>
+  <circle cx="397" cy="736" r="27.7" class="option2"/>
+  <text class="circle-code" x="397" y="736">O2</text>
+  <text class="base-value" x="333" y="786">39.2</text>
+  <text class="opt-value" x="397" y="786">50.01</text>
+
+  <rect x="475" y="656" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="505" y="667">+0.1</text>
+  <circle cx="473" cy="736" r="22.1" class="baseline"/>
+  <text class="circle-code" x="473" y="736">B</text>
+  <circle cx="537" cy="736" r="22.2" class="option2"/>
+  <text class="circle-code" x="537" y="736">O2</text>
+  <text class="base-value" x="473" y="786">43.6</text>
+  <text class="opt-value" x="537" y="786">43.74</text>
+
+  <rect x="615" y="656" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="645" y="667">-2.6</text>
+  <circle cx="613" cy="736" r="26.6" class="baseline"/>
+  <text class="circle-code" x="613" y="736">B</text>
+  <circle cx="677" cy="736" r="24.3" class="option2"/>
+  <text class="circle-code" x="677" y="736">O2</text>
+  <text class="base-value" x="613" y="786">48.7</text>
+  <text class="opt-value" x="677" y="786">46.13</text>
+
+  <rect x="755" y="656" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="785" y="667">-1.2</text>
+  <circle cx="753" cy="736" r="30.0" class="baseline"/>
+  <text class="circle-code" x="753" y="736">B</text>
+  <circle cx="817" cy="736" r="29.0" class="option2"/>
+  <text class="circle-code" x="817" y="736">O2</text>
+  <text class="base-value" x="753" y="786">52.8</text>
+  <text class="opt-value" x="817" y="786">51.61</text>
+
+  <rect x="895" y="656" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="925" y="667">-1.1</text>
+  <circle cx="893" cy="736" r="33.6" class="baseline"/>
+  <text class="circle-code" x="893" y="736">B</text>
+  <circle cx="957" cy="736" r="32.7" class="option2"/>
+  <text class="circle-code" x="957" y="736">O2</text>
+  <text class="base-value" x="893" y="786">57.3</text>
+  <text class="opt-value" x="957" y="786">56.22</text>
+
+  <rect x="1035" y="656" width="60" height="22" rx="11" class="delta-chip"/>
+  <text class="delta-text" x="1065" y="667">-0.4</text>
+  <circle cx="1033" cy="736" r="35.0" class="baseline"/>
+  <text class="circle-code" x="1033" y="736">B</text>
+  <circle cx="1097" cy="736" r="34.7" class="option2"/>
+  <text class="circle-code" x="1097" y="736">O2</text>
+  <text class="base-value" x="1033" y="786">59.1</text>
+  <text class="opt-value" x="1097" y="786">58.74</text>
+
+  <rect x="36" y="866" width="1148" height="54" rx="2" class="panel"/>
+  <rect x="36" y="866" width="6" height="54" class="accent"/>
+  <text class="note-title" x="58" y="892">Readout</text>
+  <text class="note-text" x="58" y="912">Option 2 materially improves NFR and NFR days across the forecast horizon. Annual funding cost is higher than baseline in FY2026–27, then turns modestly favourable from FY2028 onward.</text>
+</svg>

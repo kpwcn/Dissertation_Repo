@@ -1,0 +1,171 @@
+from pathlib import Path
+import matplotlib.pyplot as plt
+import numpy as np
+
+# ── Constants ─────────────────────────────────────────────────────────────────
+FONT        = "Times New Roman"
+TITLE_SIZE  = 22
+LABEL_SIZE  = 14
+TICK_SIZE   = 13
+NOTE_SIZE   = 11
+DPI         = 300
+FIG_W, FIG_H = 14, 8
+
+MARGINS = dict(left=0.08, right=0.93, top=0.92, bottom=0.15)
+
+COLORS = {
+    "hist"       : "#1E1E1E",      # Dark grey for historical
+    "baseline"   : "#D32F2F",      # Red
+    "contract"   : "#FF8A3D",      # Orange
+    "spv"        : "#1B5E20",      # Dark green
+    "grid"       : "#CCCCCC",
+    "axis_text"  : "#1a1a1a",
+    "note_text"  : "#444444",
+    "navy"       : "#1a1a1a",
+    "border"     : "#CCCCCC",
+}
+
+HERE = Path(__file__).resolve().parent if "__file__" in globals() else Path.cwd()
+OUT_DIR = HERE / "pngs"
+OUT_DIR.mkdir(exist_ok=True)
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+years = ['FY21A', 'FY22A', 'FY23A', 'FY24A', 'FY25A', 'FY26E', 'FY27E', 'FY28E', 'FY29E', 'FY30E', 'FY31E']
+x = np.arange(len(years))
+
+historical = [1124, 1646, 910, 1309, 938]
+baseline = [1124, 1646, 910, 1309, 938, 872, 969, 1081, 1174, 1272, 1314]
+contract_redesign = [1124, 1646, 910, 1309, 938, 853, 926, 1009, 1069, 1131, 1138]
+spv_securitisation = [1124, 1646, 910, 1309, 938, 741, 463, 245, 185, 188, 190]
+
+# ── Plot setup ────────────────────────────────────────────────────────────────
+plt.rcParams.update({
+    "font.family"        : FONT,
+    "axes.spines.top"    : False,
+    "axes.spines.right"  : False,
+    "axes.spines.left"   : False,
+    "axes.spines.bottom" : False,
+    "xtick.bottom"       : False,
+    "ytick.left"         : False,
+})
+
+fig, ax = plt.subplots(figsize=(FIG_W, FIG_H), facecolor="none")
+fig.subplots_adjust(**MARGINS)
+ax.set_facecolor("none")
+
+line_kw = dict(linewidth=2.8, solid_capstyle="round", solid_joinstyle="round")
+
+# ── Shared historical path ────────────────────────────────────────────────────
+ax.plot(
+    x[:5], historical,
+    color=COLORS["hist"],
+    marker="o", markersize=7,
+    markerfacecolor="white", markeredgewidth=2, markeredgecolor=COLORS["hist"],
+    zorder=4, **line_kw
+)
+
+# ── Shading between scenarios (gap visualization) ──────────────────────────────
+ax.fill_between(
+    x[4:], baseline[4:], contract_redesign[4:],
+    alpha=0.10, color=COLORS["baseline"], linewidth=0, zorder=1
+)
+
+# ── Scenario paths from FY25A onward ──────────────────────────────────────────
+# Baseline (red, dotted)
+ax.plot(
+    x[4:], baseline[4:],
+    color=COLORS["baseline"], linestyle=(0, (5, 5)),
+    marker="o", markersize=6,
+    markerfacecolor="white", markeredgewidth=1.8, markeredgecolor=COLORS["baseline"],
+    zorder=3, **line_kw
+)
+
+# Contract redesign (orange, solid)
+ax.plot(
+    x[4:], contract_redesign[4:],
+    color=COLORS["contract"],
+    marker="o", markersize=6,
+    markerfacecolor="white", markeredgewidth=1.8, markeredgecolor=COLORS["contract"],
+    zorder=3, **line_kw
+)
+
+# SPV securitisation (dark green, solid)
+ax.plot(
+    x[4:], spv_securitisation[4:],
+    color=COLORS["spv"],
+    marker="o", markersize=6,
+    markerfacecolor="white", markeredgewidth=1.8, markeredgecolor=COLORS["spv"],
+    zorder=3, **line_kw
+)
+
+# ── Split point indicator ─────────────────────────────────────────────────────
+ax.scatter([x[4]], [historical[-1]], s=130, facecolor="white", edgecolor=COLORS["hist"], linewidth=2.4, zorder=5)
+ax.axvline(x[4], color=COLORS["border"], linestyle="--", linewidth=1.1, alpha=0.7, zorder=1)
+
+# ── Title & subtitle ──────────────────────────────────────────────────────────
+fig.text(MARGINS["left"], 0.96,
+         "NFR path by scenario",
+         fontsize=TITLE_SIZE, fontweight="bold", color=COLORS["navy"], ha="left", va="bottom")
+fig.text(MARGINS["left"], 0.93,
+         "Shared historical path through FY25A; scenarios diverge from FY26E onward (€m)",
+         fontsize=LABEL_SIZE - 1, color=COLORS["axis_text"], ha="left", va="bottom")
+
+# ── Period labels ─────────────────────────────────────────────────────────────
+ax.text(2.1, 1750, "Historical actuals", fontsize=TICK_SIZE, color=COLORS["axis_text"], ha="center")
+ax.text(7.2, 1750, "Forecast scenarios", fontsize=TICK_SIZE, color=COLORS["axis_text"], ha="center")
+ax.text(x[4] + 0.05, 1770, "Split", fontsize=NOTE_SIZE + 0.5, color=COLORS["axis_text"], ha="left")
+
+# ── Axes formatting ───────────────────────────────────────────────────────────
+ax.set_xlim(-0.35, len(years) - 0.2)
+ax.set_ylim(0, 1850)
+ax.set_xticks(x)
+ax.set_xticklabels(years, fontsize=TICK_SIZE, color=COLORS["axis_text"])
+ax.set_yticks(np.arange(0, 1801, 200))
+ax.set_yticklabels([f"€{int(v):,}" for v in np.arange(0, 1801, 200)], fontsize=TICK_SIZE - 0.5, color=COLORS["axis_text"])
+
+ax.yaxis.grid(False)  # Disable default grid
+ax.set_axisbelow(True)
+
+# ── Custom grid: only from FY25A onwards (x[4] to end) ────────────────────────
+for yv in np.arange(0, 1801, 200):
+    ax.plot([x[4], x[-1] + 0.3], [yv, yv], color=COLORS["grid"], linewidth=0.8, alpha=0.9, zorder=0)
+
+# ── Spines ────────────────────────────────────────────────────────────────────
+for spine in ["left", "bottom"]:
+    ax.spines[spine].set_color(COLORS["border"])
+    ax.spines[spine].set_linewidth(0.8)
+
+ax.tick_params(axis="both", which="both", length=0)
+
+# ── End labels (legend boxes) ─────────────────────────────────────────────────
+def end_label(y, text, color, dy=0):
+    ax.text(
+        x[-1] + 0.18, y + dy, text,
+        fontsize=LABEL_SIZE, color=color, fontweight="bold",
+        va="center", ha="left",
+        bbox=dict(boxstyle="round,pad=0.4,rounding_size=0.8", fc="white", ec=color, linewidth=1.5, alpha=1.0)
+    )
+
+end_label(baseline[-1], f"Baseline  €{baseline[-1]:,}m", COLORS["baseline"], dy=18)
+end_label(contract_redesign[-1], f"Contract redesign  €{contract_redesign[-1]:,}m", COLORS["contract"], dy=-2)
+end_label(spv_securitisation[-1], f"SPV securitisation  €{spv_securitisation[-1]:,}m", COLORS["spv"], dy=0)
+
+# ── Callout annotation ────────────────────────────────────────────────────────
+ax.annotate(
+    "FY25A\ncommon starting point",
+    xy=(x[4], historical[-1]), xycoords="data",
+    xytext=(x[4] - 1.1, historical[-1] - 220), textcoords="data",
+    fontsize=NOTE_SIZE, color=COLORS["axis_text"],
+    ha="center", va="center",
+    arrowprops=dict(arrowstyle="-", color=COLORS["note_text"], lw=1.3),
+    bbox=dict(boxstyle="round,pad=0.35,rounding_size=0.6", fc="white", ec=COLORS["border"], linewidth=1, alpha=1.0)
+)
+
+# ── Source note ───────────────────────────────────────────────────────────────
+fig.text(MARGINS["left"], 0.02,
+         "Source: Model outputs and user-provided scenarios",
+         fontsize=NOTE_SIZE, color=COLORS["note_text"], ha="left", va="bottom", style="italic")
+
+# ── Save ──────────────────────────────────────────────────────────────────────
+plt.savefig(str(OUT_DIR / "nfr_chart.png"), dpi=DPI, facecolor="none", transparent=True, bbox_inches="tight")
+print("Saved.")

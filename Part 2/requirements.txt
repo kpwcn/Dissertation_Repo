@@ -1,0 +1,27 @@
+# Data Manipulation and Analysis
+pandas          # The core library for dataframes and CSV/Excel handling
+numpy           # Essential for numerical operations and arrays
+openpyxl        # Required by pandas to read/write Excel (.xlsx) files
+
+# Data Visualization (Static)
+matplotlib      # The foundational plotting library
+seaborn         # Built on top of matplotlib; beautiful statistical graphics
+
+# Data Visualization (Interactive)
+plotly          # Interactive, web-based charts (great for VS Code notebooks)
+bokeh           # Specialized for large datasets and browser-based interactivity
+
+# Scientific Computing & Utils
+scipy           # Advanced mathematical functions
+scikit-learn    # Machine learning (often used alongside visualization)
+
+# VS Code / Jupyter Support
+ipykernel       # Required to run Jupyter Notebooks (.ipynb) inside VS Code
+
+# To activate venv, run the following command in your terminal:
+# For Windows: .venv\Scripts\activate
+# For macOS/Linux: source .venv/bin/activate
+
+# To install the required packages, run:
+# .venv\Scripts\python.exe -m pip install -r requirements.txt
+# or simply: pip install -r requirements.txt
